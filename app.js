@@ -121,7 +121,7 @@ app.use(invoiceRoute);
 app.use(adminRoute);
 app.use(expenseRoute);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.listen(port, () => {
   console.log("oldsailor connected successfully at port: ", port);
