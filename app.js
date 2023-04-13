@@ -45,7 +45,7 @@ mongoose.connect(config.database, function (err) {
   } else {
     console.log("database connected");
   }
-});
+},{ autoIndex: false });
 
 //sessesion midleware
 app.use(
@@ -53,7 +53,7 @@ app.use(
     resave: true,
     saveUninitialized: true,
     secret: config.secret,
-    store: new connectMongo({ url: config.database, autoReconnect: true }),
+    //store: new connectMongo({ url: config.database, autoReconnect: true,  }),
   })
 );
 app.use(expressFlash());
